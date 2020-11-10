@@ -1,2 +1,2 @@
 # Sumak_restaurant
-[Demo]()
+[Demo](https://nichteros.github.io/Sumak_restaurant/)
