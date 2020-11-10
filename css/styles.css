@@ -1,0 +1,231 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.backgrounds {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.backgrounds img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+header {
+  display: flex;
+  background-color: rgba(82, 16, 16, 0.9);
+  justify-content: space-between;
+}
+header nav ul {
+  display: flex;
+}
+.greeting {
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.greeting p {
+  color: rgba(255, 255, 255, 0.8);
+}
+.greeting h1 {
+  background: linear-gradient(180deg, #FFF505 0%, rgba(255, 188, 5, 0.0364583) 0.01%, #FAFF03 100%), linear-gradient(180deg, #FFFFFF 45.83%, rgba(255, 255, 244, 0) 65.62%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.greeting button {
+  width: 200px;
+  padding: 5px;
+  margin: 30px 0;
+  font-size: 20px;
+  background: #760C0C;
+  border: 2px solid #FFFFFF;
+  border-radius: 40px;
+}
+.greeting button a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.greeting .order-desktop {
+  display: none;
+}
+.greeting svg {
+  position: relative;
+  bottom: -3px;
+  fill: #FFFFFF;
+  transform: rotate(180deg);
+  width: 50%;
+}
+.about-us {
+  background: #ffffff;
+  display: flex;
+  flex-flow: row wrap;
+}
+@media (max-width: 767px) {
+  header .logo img {
+    height: 100px;
+  }
+  header .hamburger-menu {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+  }
+  header .hamburger-menu input[type="checkbox"] {
+    position: relative;
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+  header .hamburger-menu .menu-button {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 4px;
+  }
+  header .hamburger-menu .menu-button span {
+    background: #daa516;
+    height: 6px;
+    width: 50px;
+    border-radius: 5px;
+  }
+  header .hamburger-menu #menu-toggle:checked ~ .menu-button > span:nth-child(1) {
+    position: absolute;
+    transform: rotate(45deg);
+  }
+  header .hamburger-menu #menu-toggle:checked ~ .menu-button > span:nth-child(2) {
+    transform: scale(0);
+  }
+  header .hamburger-menu #menu-toggle:checked ~ .menu-button > span:nth-child(3) {
+    position: absolute;
+    transform: rotate(-45deg);
+  }
+  header .header-menu {
+    position: fixed;
+    z-index: -1;
+    top: -100%;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    overflow: auto;
+    background-color: #9b6013;
+    transition: all 0.7s ease 0s;
+  }
+  header .header-menu .nav-list .nav-item {
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    font-size: 24px;
+  }
+  header .header-menu .nav-list .nav-item a {
+    text-decoration: none;
+    color: #521010;
+  }
+  header .header-menu.active {
+    top: 0;
+    margin-top: 100px;
+    z-index: 1;
+    opacity: 1;
+  }
+  .greeting {
+    padding-top: 20px;
+  }
+  .greeting p {
+    padding-top: 30px;
+    font-size: 24px;
+  }
+  .greeting h1 {
+    margin-top: 30px;
+    font-size: 48px;
+  }
+  .about-us {
+    flex-direction: column;
+  }
+  .about-us .description {
+    padding: 20px;
+    text-align: center;
+  }
+  .about-us .description h1 {
+    font-size: 36px;
+    color: #521010;
+  }
+  .about-us .description p {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  .about-us .img-box {
+    padding: 50px;
+  }
+}
