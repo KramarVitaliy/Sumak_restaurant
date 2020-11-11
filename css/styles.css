@@ -110,7 +110,7 @@ header nav ul {
   padding: 5px;
   margin: 30px 0;
   font-size: 20px;
-  background: #760C0C;
+  background: #760c0c;
   border: 2px solid #FFFFFF;
   border-radius: 40px;
 }
@@ -132,6 +132,9 @@ header nav ul {
   background: #ffffff;
   display: flex;
   flex-flow: row wrap;
+}
+.reviews {
+  color: #FFFFFF;
 }
 @media (max-width: 767px) {
   header .logo img {
