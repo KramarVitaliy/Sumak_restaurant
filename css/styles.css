@@ -136,7 +136,77 @@ header nav ul {
   display: flex;
   flex-flow: row wrap;
 }
+.reviews {
+  background: #FFFFFF;
+}
+.reviews .triangle {
+  display: flex;
+  justify-content: center;
+}
+.reviews .triangle svg {
+  position: relative;
+  bottom: -18px;
+  fill: #FFFFFF;
+  width: 50%;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #000000;
+}
+footer h1 {
+  margin-top: 30px;
+  color: rgba(255, 255, 255, 0.8);
+}
+footer h1 span {
+  color: #daa516;
+}
+footer button {
+  width: 200px;
+  padding: 5px;
+  margin: 30px 0;
+  font-size: 20px;
+  background: #760c0c;
+  border: 2px solid #FFFFFF;
+  border-radius: 40px;
+}
+footer button a {
+  text-decoration: none;
+  color: #ffffff;
+}
+footer .order-desktop {
+  display: none;
+}
+footer .contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .contacts a {
+  margin: 20px;
+  text-decoration: none;
+  color: white;
+}
+footer .contacts .social a {
+  font-size: 48px;
+}
+footer .contacts .social a:nth-child(1) {
+  color: #00b7ff;
+}
+footer .contacts .social a:nth-child(2) {
+  color: #7700ff;
+}
+footer .contacts .social a:nth-child(3) {
+  color: #ff3c00;
+}
 @media (max-width: 767px) {
+  body.lock {
+    overflow: hidden;
+  }
+  .backgrounds {
+    display: none;
+  }
   header .logo img {
     height: 100px;
   }
@@ -203,6 +273,7 @@ header nav ul {
     opacity: 1;
   }
   .greeting {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/background1.jpg);
     padding-top: 20px;
   }
   .greeting p {

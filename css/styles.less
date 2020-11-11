@@ -8,20 +8,20 @@ body {
 }
 
 .backgrounds {
-  display: flex;
+  display       : flex;
   flex-direction: column;
-  position: fixed;
-  top     : 0;
-  left    : 0;
-  width   : 100%;
-  height  : 100%;
-  z-index : -1;
+  position      : fixed;
+  top           : 0;
+  left          : 0;
+  width         : 100%;
+  height        : 100%;
+  z-index       : -1;
 
 
   img {
     object-fit: cover;
-    width: 100%;
-    height: 100%;
+    width     : 100%;
+    height    : 100%;
   }
 }
 
@@ -84,10 +84,90 @@ header {
 
 .about-us {
   background: rgb(255, 255, 255);
-  display: flex;
-  flex-flow: row wrap;
+  display   : flex;
+  flex-flow : row wrap;
 }
 
+.reviews {
+  background: #FFFFFF;
+
+  .triangle {
+    display: flex;
+    justify-content: center;
+
+    svg {
+      position : relative;
+      bottom   : -18px;
+      fill     : #FFFFFF;
+      width    : 50%;
+    }
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #000000;
+
+  h1 {
+    margin-top: 30px;
+    color: rgba(255, 255, 255, .8);
+
+    span {
+      color: rgb(218, 165, 22);
+    }
+  }
+
+  button {
+    width        : 200px;
+    padding      : 5px;
+    margin       : 30px 0;
+    font-size    : 20px;
+    background   : rgb(118, 12, 12);
+    border       : 2px solid #FFFFFF;
+    border-radius: 40px;
+
+    a {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+    }
+  }
+
+  .order-desktop {
+    display: none;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      margin: 20px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .social {
+      a {
+        font-size: 48px;
+      }
+
+      a:nth-child(1) {
+        color: rgb(0, 183, 255);
+      }
+
+      a:nth-child(2) {
+        color: rgb(119, 0, 255);
+      }
+
+      a:nth-child(3) {
+        color: rgb(255, 60, 0);
+      }
+    }
+  }
+}
 
 
 
@@ -97,7 +177,13 @@ header {
 //__________________
 
 @media (max-width: 767px) {
-  .backgrounds {}
+  body.lock{
+    overflow: hidden;
+}
+
+  .backgrounds {
+    display: none;
+  }
 
   header {
     .logo {
@@ -185,6 +271,9 @@ header {
 
 
   .greeting {
+    background-image:
+      linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../img/background1.jpg);
     padding-top: 20px;
 
     p {
@@ -204,16 +293,16 @@ header {
     flex-direction: column;
 
     .description {
-      padding: 20px;
+      padding   : 20px;
       text-align: center;
 
       h1 {
         font-size: 36px;
-        color:  rgb(82, 16, 16);
+        color    : rgb(82, 16, 16);
       }
 
       p {
-        font-size: 24px;
+        font-size : 24px;
         margin-top: 20px;
       }
     }
