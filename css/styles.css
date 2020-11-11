@@ -67,6 +67,9 @@ select {
     scroll-behavior: auto !important;
   }
 }
+body {
+  font-family: 'Alice', serif;
+}
 .backgrounds {
   display: flex;
   flex-direction: column;
@@ -132,9 +135,6 @@ header nav ul {
   background: #ffffff;
   display: flex;
   flex-flow: row wrap;
-}
-.reviews {
-  color: #FFFFFF;
 }
 @media (max-width: 767px) {
   header .logo img {
