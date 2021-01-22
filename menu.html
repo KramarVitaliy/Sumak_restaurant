@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Сумак</title>
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/menu.css">
   <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 </head>
@@ -38,31 +40,31 @@
     </div>
   </header>
   <section class="greeting">
-    <p>Ресторан кавказько-європейської кухні</p>
-    <h1>Сумак</h1>
-    <p>Вітає своїх гостей</p>
-    <button class="order-mobile"><a href="tel:+380673331309">Забронювати стіл</a></button>
-    <button class="order-desktop"><a href="#">Забронювати стіл</a></button>
+    <h1>Меню</h1>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
       <path class="elementor-shape-fill" d="M500,98.9L0,6.1V0h1000v6.1L500,98.9z"></path>
     </svg>
   </section>
-  <section class="about-us">
-    <div class="description">
-      <h1>Ресторан Сумак</h1>
-      <p>Небольшое описание ресторана Сумак</p>
+  <section class="menu">
+    <div class="menu-navigation">
+      <button class="btn-kitchen">Кухня</button>
+      <button class="btn-mangal">Мангал</button>
+      <button class="btn-bar">Бар</button>
+      <button class="btn-banket">Банкетне</button>
     </div>
-    <div class="img-box">
-      <img src="./img/maiden tower.jpg" alt="Main in">
+    <div class="kitchen active">
+      <img src="./img/kitchen/Холодные закуски.png" alt="Snaks">
+      <img src="./img/kitchen/Салаты-соусы.png" alt="Salats">
     </div>
-  </section>
-  <section class="reviews">
-    <div class="elfsight-app-d60ac62e-ad01-4cb0-a885-47e38537e108">
+    <div class="mangal">
+      <img src="./img/mangal/Мангал_гарниры.png" alt="Kebab">
     </div>
-    <div class="triangle">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-        <path class="elementor-shape-fill" d="M500,98.9L0,6.1V0h1000v6.1L500,98.9z"></path>
-      </svg>
+    <div class="bar">
+      <img src="./img/bar/Кофе(инстаграм).png" alt="Coffe">
+      <img src="./img/bar/Вина(Инстаграм).png" alt="Wine">
+    </div>
+    <div class="banket">
+      <img src="./img/banket/Банкетное.png" alt="Banket">
     </div>
   </section>
   <footer>
@@ -87,6 +89,7 @@
     integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous">
     </script>
   <script src="./js/hamburger.js"></script>
+  <script src="./js/menu-tabs.js"></script>
   <script src="https://apps.elfsight.com/p/platform.js" defer></script>
 </body>
 

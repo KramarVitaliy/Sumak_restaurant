@@ -1,0 +1,41 @@
+
+.greeting {
+  h1 {
+    padding: 100px 0;
+  }
+}
+
+.menu {
+  padding: 100px;
+  background: #ffffff;
+
+  .menu-navigation {
+    display: flex;
+    justify-content: center;
+
+    button {
+      width: 200px;
+      margin: 0 20px;
+      padding: 0 10px;
+      font-size: 36px;
+      border: 2px solid #000000;
+      border-radius: 30px;
+      outline: none;
+      transition: all .7s;
+    }
+
+    button:hover {
+      background: rgba(220, 20, 60, .7);
+      border: 2px solid brown;
+      color: brown;
+    }
+  }
+
+  > div {
+    display: none;
+  }
+
+  .active {
+    display: block;
+  }
+}

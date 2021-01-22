@@ -1,0 +1,14 @@
+.route {
+  background: #ffffff;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.route h1 {
+  margin-top: 50px;
+}
+
+.route iframe {
+  margin: 50px 0;
+}

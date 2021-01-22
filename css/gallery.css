@@ -1,0 +1,19 @@
+.greeting h1 {
+  margin: 100px 0;
+}
+
+.gallery {
+  background: #fff;
+  display: flex;
+  padding: 0 100px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery img{
+  margin:5px; /* внешние отступы картинок */
+  border:3px solid #fff; /* рамка картинок */
+ }
+ a.photo:hover img{
+  border:3px solid #034F80; /* изменение цвета рамки при наведении на картинку */
+ }
